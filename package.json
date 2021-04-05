@@ -8,10 +8,10 @@
     "build": "next build",
     "create:component": "node ./helper_scripts/commands/create_component.js",
     "create:page": "node ./helper_scripts/commands/create_page.js",
+    "dev": "next",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "start": "next start",
-    "start:dev": "next",
     "type-check": "tsc --pretty --noEmit"
   },
   "husky": {
