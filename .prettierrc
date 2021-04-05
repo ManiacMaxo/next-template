@@ -3,7 +3,7 @@
   "jsxSingleQuote": true,
   "overrides": [
     {
-      "files": "*.json",
+      "files": ["*.json", "*rc", "*.yml"],
       "options": {
         "tabWidth": 2
       }
