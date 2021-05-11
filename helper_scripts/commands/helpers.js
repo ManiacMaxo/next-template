@@ -5,8 +5,8 @@ const handlebars = require('handlebars')
 const modules = {}
 
 modules.config = {
-    pagesDir: './pages',
-    componentsDir: './components',
+    pagesDir: './src/pages',
+    componentsDir: './src/components',
     templatesDir: './helper_scripts/templates'
 }
 
