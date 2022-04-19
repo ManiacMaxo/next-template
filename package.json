@@ -1,51 +1,45 @@
 {
   "name": "some-next-app",
   "version": "0.1.0",
-  "author": "John Doe",
   "private": true,
   "license": "MIT",
   "scripts": {
+    "start": "next start",
     "build": "next build",
-    "create:component": "node ./helper_scripts/commands/create_component.js",
-    "create:page": "node ./helper_scripts/commands/create_page.js",
+    "lint": "next lint",
     "dev": "next",
     "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js",
-    "start": "next start",
-    "type-check": "tsc --pretty --noEmit"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "type-check": "tsc --pretty --noEmit",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn format"
-    ]
+    "*.{ts,tsx,js}": "eslint --cache --ext ts --ext tsx --ext js",
+    "*": "prettier --write -u"
   },
   "dependencies": {
-    "next": "^12.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1"
+    "next": "^12.1.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@types/node": "^16.11.6",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@typescript-eslint/eslint-plugin": "^5.2.0",
-    "@typescript-eslint/parser": "^5.2.0",
-    "eslint": "^8.1.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react": "^7.26.1",
-    "handlebars": "^4.7.7",
+    "@types/node": "^17.0.25",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.17",
+    "eslint": "^8.13.0",
+    "eslint-config-next": "12.1.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.4",
-    "inquirer": "^8.2.0",
-    "lint-staged": "^11.2.6",
-    "prettier": "^2.4.1",
-    "sass": "^1.43.4",
-    "typescript": "^4.4.4"
+    "lint-staged": "^12.3.8",
+    "postcss": "^8.4.6",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "sass": "^1.50.1",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.6.3"
   }
 }

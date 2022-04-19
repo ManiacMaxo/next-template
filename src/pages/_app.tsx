@@ -1,14 +1,13 @@
+import { ThemeProvider } from '@/contexts'
+import '@/styles/global.scss'
 import { AppProps } from 'next/app'
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
-import { Layout } from '../components'
-import '../styles/global.scss'
 
-const AppWrapper = ({ Component, pageProps }: AppProps) => {
+const AppWrapper: React.FC<AppProps> = ({ Component, pageProps }) => {
     return (
-        <Layout>
+        <ThemeProvider>
             <Component {...pageProps} />
-        </Layout>
+        </ThemeProvider>
     )
 }
 

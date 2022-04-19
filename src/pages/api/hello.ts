@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-const hello = (req: NextApiRequest, res: NextApiResponse): any => {
+const hello = (_req: NextApiRequest, res: NextApiResponse) => {
     return res.send('hello world')
 }
 
